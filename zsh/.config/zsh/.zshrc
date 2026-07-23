@@ -50,7 +50,9 @@ LF_ICONS=$(cat ~/.config/lf/icons | tr '\n' ':')
 export LF_ICONS
 
 # Initialize zoxide
-eval "$(zoxide init zsh)"
+if command -v zoxide &> /dev/null; then
+	eval "$(zoxide init zsh)"
+fi
 
 # =========================================================
 # Completion

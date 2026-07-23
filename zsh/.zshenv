@@ -9,8 +9,13 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 # ---------- Editor ----------
 # Default editor used by git, crontab, etc.
-export EDITOR="nvim"
-export VISUAL="nvim"
+if command -v nvim &> /dev/null; then
+	export EDITOR="nvim"
+	export VISUAL="nvim"
+else
+	export EDITOR="vi"
+	export VISUAL="vi"
+fi
 
 # ---------- Pager ----------
 if command -v bat >/dev/null 2>&1; then
