@@ -24,6 +24,6 @@ require("lazy").setup({
   
   -- Put the install settings table right here:
   install = { 
-    colorscheme = { "habamax" } 
+    colorscheme = { "tokyonight" } 
   },
 })
