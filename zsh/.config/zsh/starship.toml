@@ -16,7 +16,7 @@ CachyOS = "󰣇"
 Macos   = ""
 
 [directory]
-format            = "[$path](cyan) "
+format            = "[$path](bold blue)[$read_only]($read_only_style) "
 truncation_length = 4
 truncate_to_repo  = true
 
