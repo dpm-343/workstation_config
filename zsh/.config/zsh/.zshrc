@@ -11,6 +11,15 @@
 #   Node:         nvm
 
 # =========================================================
+# Directory setup
+# =========================================================
+
+if [[ ! -f "$XDG_STATE_HOME/zsh/history" ]]; then
+	mkdir -p "$XDG_STATE_HOME/zsh"
+	touch "$XDG_STATE_HOME/zsh/history"
+fi
+
+# =========================================================
 # History
 # =========================================================
 
@@ -87,6 +96,7 @@ if [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]]; then
   source /usr/share/doc/fzf/examples/key-bindings.zsh
   source /usr/share/doc/fzf/examples/completion.zsh
 fi
+
 
 # =========================================================
 # Modular Config Files
