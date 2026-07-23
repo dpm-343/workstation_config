@@ -14,6 +14,8 @@ if command -v eza &> /dev/null; then
 	# Reuse ls completions for eza (avoids defining a separate completion function)
 	compdef eza=ls
 
+else
+	alias ls='ls --color'
 fi
 
 if command -v batcat &> /dev/null; then
