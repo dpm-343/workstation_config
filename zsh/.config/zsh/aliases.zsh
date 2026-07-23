@@ -1,26 +1,34 @@
-# Better ls
-alias ls='eza --icons'
+if command -v eza &> /dev/null; then
+	# Better ls
+	alias ls='eza --icons'
 
-# Detailed listing
-alias ll='eza -lh --icons --git'
+	# Detailed listing
+	alias ll='eza -lh --icons --git'
 
-# Detailed listing including hidden files
-alias la='eza -lah --icons --git'
+	# Detailed listing including hidden files
+	alias la='eza -lah --icons --git'
 
-# Tree view
-alias tree='eza --tree --icons'
+	# Tree view
+	alias tree='eza --tree --icons'
 
-# Reuse ls completions for eza (avoids defining a separate completion function)
-compdef eza=ls
+	# Reuse ls completions for eza (avoids defining a separate completion function)
+	compdef eza=ls
 
-# Better cat
-#alias cat='bat'
+fi
+
+if command -v batcat &> /dev/null; then
+	# Better cat
+	alias cat='batcat'
+fi
 
 # =========================================================
 # Core utilities
 # =========================================================
 
-#alias grep='rg --color=auto'
+if command -v rg &> /dev/null; then
+	alias grep='rg --color=auto'
+fi
+
 alias diff='diff --color=auto'
 alias df='df -h'
 
@@ -44,7 +52,9 @@ lf() { # zsh follow lf navigation
 # Editor
 # =========================================================
 
-alias vim='nvim'
+if command -v nvim &> /dev/null; then
+	alias vim='nvim'
+fi
 
 # =========================================================
 # Git
