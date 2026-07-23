@@ -2,7 +2,7 @@
 
 add_newline = false
 
-format = "$directory$os$git_branch$git_status$nodejs$rust$golang$php $character"
+format = "$os$directory$git_branch$git_status$python$line_break$character"
 
 [os]
 disabled = false
@@ -35,6 +35,16 @@ untracked  = "[?$count ](bold white)"
 deleted    = "[✘$count ](bold red)"
 conflicted = "[⚡$count ](bold red)"
 
+[newline_prefix]
+format =""
+
+[line_break]
+disabled = false
+
+[python]
+#symbol = ""
+format = "[$symbol$version](green) "
+
 [nodejs]
 symbol = ""
 format = "[$symbol $version](green) "
@@ -52,6 +62,6 @@ symbol = ""
 format = "[$symbol $version](purple) "
 
 [character]
-success_symbol = "[❯](green)"
-error_symbol   = "[❯](red)"
-vimcmd_symbol  = "[❮](blue)"
+success_symbol = "[└─>](green)"
+error_symbol   = "[└─>](red)"
+vimcmd_symbol  = "[└─<](blue)"
