@@ -2,7 +2,7 @@
 
 add_newline = false
 
-format = "$os$directory$git_branch$git_status$python$line_break$character"
+format = "$username$hostname$os$directory$git_branch$git_status$python$line_break$character"
 
 [os]
 disabled = false
@@ -34,6 +34,28 @@ modified   = "[●$count ](bold yellow)"
 untracked  = "[?$count ](bold white)"
 deleted    = "[✘$count ](bold red)"
 conflicted = "[⚡$count ](bold red)"
+
+[hostname]
+ssh_only = true
+ssh_symbol = "🌐"
+trim_at = "."
+detect_env_vars = []
+format = "[$ssh_symbol$hostname]($style) "
+style = "green dimmed bold"
+disabled = false
+
+[hostname.aliases]
+
+[username]
+detect_env_vars = []
+format = "[$user]($style)"
+style_root = "red bold"
+style_user = "yellow bold"
+show_always = false
+disabled = false
+
+[username.aliases]
+"mjodom" = ""
 
 [line_break]
 disabled = false
