@@ -35,9 +35,6 @@ untracked  = "[?$count ](bold white)"
 deleted    = "[✘$count ](bold red)"
 conflicted = "[⚡$count ](bold red)"
 
-[newline_prefix]
-format =""
-
 [line_break]
 disabled = false
 
