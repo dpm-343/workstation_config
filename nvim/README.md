@@ -50,6 +50,6 @@ end
 
 2. If nvim is run via sudo, run `sudo visudo` and add the following line:
 
-```
+'''
 Defaults env_keep += "TERM_PROGRAM"
-```
+'''
