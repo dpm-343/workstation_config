@@ -52,6 +52,4 @@ end
 
 ```
 Defaults env_keep += "TERM_PROGRAM"
-=======
->>>>>>> 54500ba69c70affe3b7b48cb71783e3b0a69d42f
 ```
