@@ -1,9 +1,10 @@
 Install Neovim
 
-'''
+```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim-linux-x86_64
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+<<<<<<< HEAD
 '''
 
 
@@ -51,4 +52,6 @@ end
 
 ```
 Defaults env_keep += "TERM_PROGRAM"
+=======
+>>>>>>> 54500ba69c70affe3b7b48cb71783e3b0a69d42f
 ```
