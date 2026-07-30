@@ -61,7 +61,9 @@ if command -v nvim &> /dev/null; then
 fi
 
 alias sudo='sudo '
-alias nvim='/opt/nvim-linux-x86_64/bin/nvim'
+if [ -f /opt/nvim-linux-x86_64/bin/nvim' ]; then
+	alias nvim='/opt/nvim-linux-x86_64/bin/nvim'
+fi
 
 # =========================================================
 # Git
