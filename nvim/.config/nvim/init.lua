@@ -15,6 +15,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.opt.mouse = ""
+
 -- Initialize lazy.nvim and pass options
 require("lazy").setup({
   spec = {
