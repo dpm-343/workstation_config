@@ -62,7 +62,9 @@ disabled = false
 
 [python]
 #symbol = ""
-format = "[$symbol$version](green) "
+#format = "[$symbol$version](green) "
+format = "[${symbol}${version} (\\($virtualenv\\))]($style) "
+style = "bold green"
 
 [nodejs]
 symbol = ""
