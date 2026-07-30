@@ -61,8 +61,11 @@ if command -v nvim &> /dev/null; then
 fi
 
 alias sudo='sudo '
-if [ -f /opt/nvim-linux-x86_64/bin/nvim' ]; then
+if [ -f '/opt/nvim-linux-x86_64/bin/nvim' ]; then
 	alias nvim='/opt/nvim-linux-x86_64/bin/nvim'
+	# Update Default Editors
+	export EDITOR="nvim"
+	export VISUAL="nvim"
 fi
 
 # =========================================================
