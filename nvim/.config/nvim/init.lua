@@ -15,7 +15,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.opt.mouse = ""
+if vim.env.SSH_CONNECTION or vim.env.SSH_TTY then
+  -- Settings for SSH sessions
+  vim.opt.mouse = "r" -- or "" to disable, or "a" to enable all
+else
+  -- Settings for local sessions
+  vim.opt.mouse = "a"
+end
 
 -- Initialize lazy.nvim and pass options
 require("lazy").setup({
