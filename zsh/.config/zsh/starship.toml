@@ -2,11 +2,11 @@
 
 add_newline = false
 
-format = "$username$hostname$os$directory$git_branch$git_status$python$line_break$character"
+format = """$username$hostname$os[](#3c4161)$directory[](fg:#3c4161 bg:#1f2030)$git_branch$git_status$python$fill$line_break$character"""
 
 [os]
 disabled = false
-format = "[$symbol](#blue) "
+format = "[$symbol](bg:#1f2030 fg:#blue)"
 
 [os.symbols]
 Ubuntu  = "󰕈"
@@ -16,24 +16,32 @@ CachyOS = "󰣇"
 Macos   = ""
 
 [directory]
-format            = "[$path](bold blue)[$read_only]($read_only_style) "
+style		  = "bg:#3c4161 fg:#83aafe"
+read_only_style	  = "bg:#3c4161 fg:#e100aa"
+format            = "[$path]($style)[$read_only]($read_only_style)"
 truncation_length = 4
 truncate_to_repo  = true
 
 [git_branch]
 symbol = ""
-format = "[$symbol $branch](bold purple) "
+style  = "bg:#1f2030 fg:bold purple"
+format = "[ $symbol $branch ]($style)"
 
 [git_status]
+style      = "bg:#1f2030 fg:#83aafe"
 format     = "($ahead_behind$staged$modified$untracked$deleted$conflicted)"
-ahead      = "[⇡$count ](bold cyan)"
-behind     = "[⇣$count ](bold cyan)"
-diverged   = "[⇡$ahead_count⇣$behind_count ](bold cyan)"
-staged     = "[+$count ](bold green)"
-modified   = "[●$count ](bold yellow)"
-untracked  = "[?$count ](bold white)"
-deleted    = "[✘$count ](bold red)"
-conflicted = "[⚡$count ](bold red)"
+ahead      = "[⇡$count ](bg:#1f2030 fg:bold cyan)"
+behind     = "[⇣$count ](bg:#1f2030 fg:bold cyan)"
+diverged   = "[⇡$ahead_count⇣$behind_count ](bg:#1f2030 fg:bold cyan)"
+staged     = "[+$count ](bg:#1f2030 fg:bold green)"
+modified   = "[●$count ](bg:#1f2030 fg:bold yellow)"
+untracked  = "[?$count ](bg:#1f2030 fg:bold white)"
+deleted    = "[✘$count ](bg:#1f2030 fg:bold red)"
+conflicted = "[⚡$count ](bg:#1f2030 fg:bold red)"
+
+[fill]
+symbol = ' '
+style = "bg:#1f2030"
 
 [hostname]
 ssh_only = true
@@ -41,7 +49,7 @@ ssh_symbol = "🌐"
 trim_at = "."
 detect_env_vars = []
 format = "[$ssh_symbol$hostname]($style) "
-style = "green dimmed bold"
+style = "bg:#1f2030 fg:green dimmed bold"
 disabled = false
 
 [hostname.aliases]
@@ -49,8 +57,8 @@ disabled = false
 [username]
 detect_env_vars = []
 format = "[$user]($style)"
-style_root = "red bold"
-style_user = "yellow bold"
+style_root = "bg:#1f2030 fg:red bold"
+style_user = "bg:#ff2030 fg:yellow bold"
 show_always = false
 disabled = false
 
