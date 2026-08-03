@@ -13,7 +13,7 @@ Ubuntu  = "󰕈"
 Artix   = "󰣇"
 Arch    = "󰣇"
 CachyOS = "󰣇"
-Macos   = ""
+Macos   = " "
 
 [directory]
 style		  = "bg:#3c4161 fg:#83aafe"
