@@ -58,7 +58,7 @@ disabled = false
 detect_env_vars = []
 format = "[$user]($style)"
 style_root = "bg:#1f2030 fg:red bold"
-style_user = "bg:#ff2030 fg:yellow bold"
+style_user = "bg:#1f2030 fg:yellow bold"
 show_always = false
 disabled = false
 
